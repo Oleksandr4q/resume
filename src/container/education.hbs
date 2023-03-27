@@ -1,0 +1,28 @@
+<div>
+  {{#with main}}
+  <main>
+    <section>
+      {{> title title="My Education" big=true}}
+      <ul>
+        {{#each education}}
+        <li>
+          {{name}}
+          {{#unless isEnd}} (ще в процесі) {{/unless}}
+          </li>
+
+        {{/each}}
+      </ul>
+    </section>
+    <section>
+      {{> title title="My certificates" big=false}}
+      <ul>
+        {{#each certificates}}
+        <li>
+          {{name}} ({{id}})
+        </li>
+        {{/each}}
+      </ul>
+    </section>
+  </main>
+  {{/with}}
+</div>
