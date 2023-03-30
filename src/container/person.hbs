@@ -1,0 +1,71 @@
+<body>
+  <header>
+    {{#with person}}
+      <div>
+        <h1>{{name}}</h1>
+      </div>
+      <div>
+        <ul>
+          <li><p>{{age}}</p></li>
+          <li><p>{{gender}}</p></li>
+        </ul>
+      </div>
+      <div>
+        {{#with address}}
+          <ul>
+            <li>
+              <em
+              >{{street}}/{{city}}/{{state}}/{{zip}}/{{country}}</em>
+            </li>
+          </ul>
+        {{/with}}
+      </div>
+      <hr />
+      <div>
+        {{#with main}}
+          <main>
+            <section>
+              <h2>{{name}}</h2>
+              <ul>
+                {{#each education}}
+                  <li>{{degree}}</li>
+                  <li>{{major}}</li>
+                  <li>{{university}}</li>
+                  <li>{{graduationYear}}</li>
+                {{/each}}
+              </ul>
+              <h3>{{title}}</h3>
+              <div>
+                {{#each workExperience}}
+                  <ul>
+                    <li>{{company}}</li>
+                    <li>{{title}}
+                      from
+                      {{startDate}}
+                      - to
+                      {{endDate}}</li>
+                    <li>{{responsibilities}}</li>
+                    <li>{{year_founded}}</li>
+                    <li>{{industry}}</li>
+                  </ul>
+                  <h3>{{workers}}</h3>
+              <div>
+                {{#each employees}}
+                  <ul>
+                    <li>{{name}}</li>
+                    <li>{{position}}</li>
+                    <li>{{department}}</li>
+                  </ul>
+                {{/each}}
+                {{/each}}
+              </div>
+              <br />
+              <hr />
+              </div>
+            </section>
+          </main>
+        {{/with}}
+      </div>
+    {{/with}}
+  </header>
+</body>
