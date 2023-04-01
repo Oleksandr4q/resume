@@ -314,6 +314,8 @@ router.get('/', function (req, res) {
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('person', {
+    layout: 'person',
+
     person: {
       name: 'Emma Johnson',
       age: 32,
@@ -349,57 +351,53 @@ router.get('/person', function (req, res) {
             ],
             year_founded: 1990,
             industry: 'Technology',
-            workers: 'Employees',
-            employees: [
+          },
+        ],
+      },
+      footer: {
+        work: 'Employees',
+        employees: [
+          {
+            name: 'John Smith',
+            position: 'CEO',
+            department: 'Executive',
+            projects: [
               {
-                name: 'John Smith',
-                position: 'CEO',
-                department: 'Executive',
-                projects: [
+                name: 'Project Alpha',
+                description:
+                  'Developing new software platform',
+                status: 'In Progress',
+                teams: [
                   {
-                    name: 'Project Alpha',
-                    description:
-                      'Developing new software platform',
-                    status: 'In Progress',
-                    teams: [
+                    team_name: 'Awesome Team',
+                    team_leader: {
+                      name: 'John Smith',
+                      title: 'Team Leader',
+                      email: 'john.smith@example.com',
+                    },
+                    team_members: [
                       {
-                        team_name: 'Awesome Team',
-                        team_leader: {
-                          name: 'John Smith',
-                          title: 'Team Leader',
-                          email: 'john.smith@example.com',
-                        },
-                        team_members: [
+                        name: 'Alice Johnson',
+                        title: 'Software Engineer',
+                        email: 'alice.johnson@example.com',
+                        skills: ['Java', 'Python', 'SQL'],
+                        projects: [
                           {
-                            name: 'Alice Johnson',
-                            title: 'Software Engineer',
-                            email:
-                              'alice.johnson@example.com',
-                            skills: [
+                            name: 'Project A',
+                            description:
+                              'Lorem ipsum dolor sit amet',
+                            technologies: [
                               'Java',
-                              'Python',
-                              'SQL',
+                              'Spring Framework',
                             ],
-                            projects: [
+                            team_members: [
                               {
-                                name: 'Project A',
-                                description:
-                                  'Lorem ipsum dolor sit amet',
-                                technologies: [
-                                  'Java',
-                                  'Spring Framework',
-                                ],
-                                team_members: [
-                                  {
-                                    name: 'Bob Lee',
-                                    title:
-                                      'Software Engineer',
-                                  },
-                                  {
-                                    name: 'Cindy Chen',
-                                    title: 'UI Designer',
-                                  },
-                                ],
+                                name: 'Bob Lee',
+                                title: 'Software Engineer',
+                              },
+                              {
+                                name: 'Cindy Chen',
+                                title: 'UI Designer',
                               },
                             ],
                           },
