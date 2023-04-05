@@ -1,0 +1,57 @@
+<div>
+  {{#with program}}
+    <h1>{{name}}</h1>
+    {{#with excursion}}
+      <li>{{name}}</li>
+      <em>{{location.city}} / {{location.country}}</em>
+      <li>{{date}}</li>
+      <br />
+      <hr />
+      <h2>{{title}}</h2>
+      {{#each program}}
+        <li>{{name}}</li>
+        <li>{{type}} / ({{duration}})</li>
+        {{#with details}}
+          {{#with museum}}
+            <li>{{name}}</li>
+            {{#with location}}
+              <em>{{address}}
+                /
+                {{city}}
+                /
+                {{country}}</em>
+            {{/with}}
+            {{#each exhibits}}
+              <li>{{name}}</li>
+              {{#if artist includeZero=true}}<li
+                >{{artist}}</li>{{/if}}
+              <ul>
+                <li>{{description}}</li>
+                {{#if audio_guide includeZero=true}}
+                  <em>audio_guide:</em>{{audio_guide}}
+                {{/if}}
+              </ul>
+            {{/each}}
+          {{/with}}
+          {{#with guide}}
+            <li>{{name}}</li>
+            <li><b>{{language}}</b> / ({{rating}})</li>
+          {{/with}}
+        {{/with}}
+        {{#with details}}
+          {{#with venue}}
+            <li>{{name}}</li>
+            {{#with location}}
+              <em>{{address}} / {{city}} / {{country}}</em>
+            {{/with}}
+            <br />
+            <br />
+          {{/with}}
+          {{#each performers}}
+            <li>{{name}} / {{type}}</li>
+          {{/each}}
+        {{/with}}
+      {{/each}}
+    {{/with}}
+  {{/with}}
+</div>
