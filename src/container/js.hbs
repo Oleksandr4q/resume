@@ -1,0 +1,59 @@
+<div>
+  {{#each header}}
+    <h1>{{name}}</h1>
+    <ul>
+      <em>{{description}}</em>
+      <br />
+      {{#with history}}
+        <li>{{founder}} / {{year}}</li>
+      {{/with}}
+    </ul>
+  {{/each}}
+  <hr />
+  <br />
+  {{#each main}}
+    <span class='badge text-bg-primary'>Types</span>
+    <ul>
+      <li>{{types}}</li>
+    </ul>
+    <span class='badge text-bg-success'>Syntax</span>
+    {{#with syntax}}
+      <ul>
+        <li>{{variables}}</li>
+        <li>{{functions}}</li>
+        <li>{{conditionals}}</li>
+        <li>{{loops}}</li>
+        <li>{{classes}}</li>
+      </ul>
+    {{/with}}
+    <br />
+    <span class='badge text-bg-info'>Features</span>
+    <ul>
+      <li>{{features}}</li>
+    </ul>
+    <br />
+    <span class='badge text-bg-warning'>Libraries</span>
+    <ul>
+      <li>{{libraries}}</li>
+    </ul>
+    <br />
+    <span class='badge text-bg-secondary'>Tools</span>
+    <ul>
+      <li>{{tools}}</li>
+    </ul>
+  {{/each}}
+  <hr />
+  <br />
+  {{#each footer}}
+    <span class='badge text-bg-info'>Community</span>
+    {{#each community}}
+      <ul class='nav'>
+        <li class='nav-item'>
+          <a class='nav-link' href='hello.world'>{{name}}
+            --
+            {{type}}</a>
+        </li>
+      </ul>
+    {{/each}}
+  {{/each}}
+</div>
