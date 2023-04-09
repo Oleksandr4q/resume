@@ -1,0 +1,297 @@
+<div>
+  {{#each header}}
+    <h1>{{make}} {{model}}</h1>
+    <ul>
+      <li>Year: {{year}}</li>
+      <li>Color: {{color}}</li>
+    </ul>
+  {{/each}}
+  <hr />
+  <br />
+  {{#each main}}
+    {{#with features}}
+      <span class='badge text-bg-success'>Interior</span>
+      {{#with interior}}
+        <br />
+        <br />
+        {{#with seats}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Seats
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Material: {{material}}</li>
+              <li> Color: {{color}}</li>
+            </ul>
+          </div>
+        {{/with}}
+        <br />
+        {{#with dashboard}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Dashboard
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Material: {{material}}</li>
+              <li> Color: {{color}}</li>
+            </ul>
+          </div>
+          <br />
+          {{#with display}}
+            <div class='dropdown'>
+              <button
+                class='btn btn-secondary dropdown-toggle'
+                type='button'
+                data-bs-toggle='dropdown'
+                aria-expanded='false'
+              >
+                Display
+              </button>
+              <ul class='dropdown-menu'>
+                <li> Type: {{type}}</li>
+                <li> Size: {{size}}</li>
+                <li> Resolution: {{resolution}}</li>
+                <li>
+                  {{#if touchscreen}}
+                    Touchscreen: (included)
+                  {{/if}}</li>
+              </ul>
+            </div>
+          {{/with}}
+          <br />
+        {{/with}}
+        {{#with audio}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Audio
+            </button>
+            <ul class='dropdown-menu'>
+              <li> System: {{system}}</li>
+              <li> Speaker: {{speakers}}</li>
+              <li>
+                {{#if subwoofer}}
+                  Subwoofer: (included)
+                {{/if}}</li>
+              <li>{{#if bluetooth}}
+                  Bluetooth: (included)
+                {{/if}}</li>
+              <li>
+                {{#if USB}}
+                  USB: (included)
+                {{/if}}</li>
+            </ul>
+          </div>
+        {{/with}}
+      {{/with}}
+      <br />
+      <span class='badge text-bg-success'>Exterior</span>
+      <br />
+      <br />
+      {{#with exterior}}
+        {{#with wheels}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Wheels
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Size: {{size}}</li>
+              <li> Type: {{type}}</li>
+              <li> Color: {{color}}</li>
+            </ul>
+          </div>
+        {{/with}}
+        <br />
+        {{#with headlights}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Headlights
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Type: {{type}}</li>
+              <li> Brightness: {{brightness}}</li>
+              <li>
+                {{#if automatic}}
+                  Automatic: (included)
+                {{/if}}</li>
+            </ul>
+          </div>
+        {{/with}}
+        <br />
+        {{#with sunroof}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Sunroof
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Type: {{type}}</li>
+              <li> Size: {{size}}</li>
+              <li>
+                {{#if automatic}}
+                  Automatic: (included)
+                {{/if}}</li>
+            </ul>
+          </div>
+        {{/with}}
+      {{/with}}
+      <br />
+      <span class='badge text-bg-success'>Safety</span>
+      <br />
+      <br />
+      {{#with safety}}
+        {{#with airbags}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Airbags
+            </button>
+            <ul class='dropdown-menu'>
+              <li> Front: {{front}}</li>
+              <li> Side: {{side}}</li>
+              <li> Knee: {{knee}}</li>
+              <li> Rear: {{rear}}</li>
+            </ul>
+          </div>
+        {{/with}}
+        <br />
+        {{#with assistance}}
+          <div class='dropdown'>
+            <button
+              class='btn btn-secondary dropdown-toggle'
+              type='button'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              Assistance
+            </button>
+            <ul class='dropdown-menu'>
+              <li>
+                {{#if blind_spot_monitoring}}
+                  Blind_spot_monitoring: (included)
+                {{/if}}</li>
+              <li>
+                {{#if rear_cross_traffic_alert}}
+                  Rear_cross_traffic_alert: (included)
+                {{/if}}</li>
+              <li>
+                {{#if lane_departure_warning}}
+                  Lane_departure_warning: (included)
+                {{/if}}</li>
+              <li>
+                {{#if adaptive_cruise_control}}
+                  Adaptive_cruise_control: (included)
+                {{/if}}</li>
+              <li>
+                {{#if collision_warning}}
+                  Collision_warning: (included)
+                {{/if}}</li>
+            </ul>
+          </div>
+        {{/with}}
+      {{/with}}
+    {{/with}}
+  {{/each}}
+  <hr />
+  <br />
+  {{#each footer}}
+    <span class='badge text-bg-success'>Engine</span>
+    <br />
+    <br />
+    {{#with engine}}
+      <div class='dropdown'>
+        <button
+          class='btn btn-secondary dropdown-toggle'
+          type='button'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Engine
+        </button>
+        <ul class='dropdown-menu'>
+          <li> Type: {{type}}</li>
+          <li> Displacement: {{displacement}}</li>
+          <li> Horsepower: {{horsepower}}</li>
+          <li> Torque: {{torque}}</li>
+          {{#with transmission}}
+            <li> Type: {{type}}</li>
+            <li> Gears: {{gears}}</li>
+          {{/with}}
+        </ul>
+      </div>
+    {{/with}}
+    <br />
+    {{#with fuel_economy}}
+      <div class='dropdown'>
+        <button
+          class='btn btn-secondary dropdown-toggle'
+          type='button'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Fuel
+        </button>
+        <ul class='dropdown-menu'>
+          <li> City: {{city}}</li>
+          <li> Highway: {{highway}}</li>
+          <li> Combined: {{combined}}</li>
+        </ul>
+      </div>
+    {{/with}}
+    <br />
+    {{#with price}}
+      <div class='dropdown'>
+        <button
+          class='btn btn-secondary dropdown-toggle'
+          type='button'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          Price
+        </button>
+        <ul class='dropdown-menu'>
+          <li> Base: {{base}}</li>
+          <li> Destination: {{destination}}</li>
+          {{#with options}}
+            <li> Navigation: {{navigation}}</li>
+            <li> Moonroof: {{moonroof}}</li>
+            <li> Premium_paint: {{premium_paint}}</li>
+          {{/with}}
+          <li> <b>Total: {{total}}</b></li>
+        </ul>
+      </div>
+    {{/with}}
+  {{/each}}
+</div>
