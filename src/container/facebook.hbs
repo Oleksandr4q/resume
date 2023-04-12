@@ -47,12 +47,11 @@
           </ul>
         </div>
       {{/each}}
-    {{/each}}
-    <br />
-    <button
+      {{#if groups}}
+      <button
       type='button'
       class='btn btn-success'
-    >Groups</button>
+    >Groups</button> 
     {{#each groups}}
       <ul>
         <li><b>{{name}}</b></li>
@@ -77,6 +76,40 @@
         </div>
       {{/each}}
     {{/each}}
-    <br />
+    {{/if}}
   {{/each}}
+  <br />
+    {{#if groups}}
+    <button
+      type='button'
+      class='btn btn-success'
+    >Groups</button>
+    {{#each groups}}
+        <ul>
+        <li><b>{{name}}</b></li>
+        <em>{{description}}</em>
+        <p>({{id}})</p>
+      </ul>
+        {{#each members}}
+            <div class='dropdown-center'>
+          <button
+            class='btn btn-warning dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Members
+          </button>
+          <ul class='dropdown-menu'>
+            <li>{{name}}</li>
+            <li>{{gender}} / {{age}}</li>
+            <li>({{id}})</li>
+          </ul>
+        </div>
+          {{/each}}
+          {{/each}}
+          {{/if}}
+          <br />
+          {{/each}}
+    </div>
 </div>
