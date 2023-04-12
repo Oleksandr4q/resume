@@ -1,0 +1,82 @@
+<div>
+  <h1><span class='badge bg-secondary'>Facebook</span></h1>
+  <button
+    type='button'
+    class='btn btn-success'
+  >Users</button>
+  {{#each users}}
+    <ul>
+      <strong>{{name}}</strong>
+      <li>{{gender}} / {{age}}</li>
+      <em>({{id}})</em>
+    </ul>
+    {{#each friends}}
+      <div class='btn-group'>
+        <button
+          type='button'
+          class='btn btn-primary'
+        >Friends</button>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle dropdown-toggle-split'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          <span class='visually-hidden'>Toggle Dropdown</span>
+        </button>
+        <ul class='dropdown-menu'>
+          <li>{{name}}</li>
+          <li>{{gender}} / {{age}}</li>
+          <li>({{id}})</li>
+        </ul>
+      </div>
+      {{#each mutual_friends}}
+        <div class='dropdown-center'>
+          <button
+            class='btn btn-light dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Mutual friends
+          </button>
+          <ul class='dropdown-menu'>
+            <li>{{name}}</li>
+            <li>{{gender}} / {{age}}</li>
+            <li>({{id}})</li>
+          </ul>
+        </div>
+      {{/each}}
+    {{/each}}
+    <br />
+    <button
+      type='button'
+      class='btn btn-success'
+    >Groups</button>
+    {{#each groups}}
+      <ul>
+        <li><b>{{name}}</b></li>
+        <em>{{description}}</em>
+        <p>({{id}})</p>
+      </ul>
+      {{#each members}}
+        <div class='dropdown-center'>
+          <button
+            class='btn btn-warning dropdown-toggle'
+            type='button'
+            data-bs-toggle='dropdown'
+            aria-expanded='false'
+          >
+            Members
+          </button>
+          <ul class='dropdown-menu'>
+            <li>{{name}}</li>
+            <li>{{gender}} / {{age}}</li>
+            <li>({{id}})</li>
+          </ul>
+        </div>
+      {{/each}}
+    {{/each}}
+    <br />
+  {{/each}}
+</div>
