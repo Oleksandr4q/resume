@@ -1,0 +1,135 @@
+<main class='p-5'>
+  <div class='row'>
+    <div class='col-12 mb-5'>
+      {{#with navigation}}
+        <div class='nav'>
+          <div class='nav-item'>
+            <a
+              href='https://github.com/'
+              class='nav-link active'
+            >Home</a>
+          </div>
+          <div class='nav-item'>
+            <a
+              href='https://www.google.com/'
+              class='nav-link active'
+            >Contacts</a>
+          </div>
+          <div class='nav-item'>
+            <a
+              href='https://www.youtube.com/'
+              class='nav-link active'
+            >Help</a>
+          </div>
+          <div class='nav-item'>
+            <a
+              href='https://www.youtube.com/'
+              class='nav-link disabled'
+            >Disabled</a>
+          </div>
+        </div>
+      {{/with}}
+    </div>
+  </div>
+  <hr />
+  <div class='row'>
+    <div class='col-12 mb-5'>
+      <div class='card'>
+        <div class='card-title'>
+          {{#with newsBlock}}
+            <h1 class='text-center'>{{title}}</h1>
+            {{#each cards}}
+              <div class='row'>
+                <div class='col-12 mb-5'>
+                  <div
+                    class='card col-3 mb-3 mx-4 text-bg-dark'
+                  >
+                    <div class='card-header'>{{title}}
+                    {{#if isTop includeZero=true}}
+                    <span class='badge text-bg-success rounded-pill text-uppercase'>New</span>
+                    {{/if}}
+                    {{#if isNew includeZero=true}}
+                    <span class='badge text-bg-danger rounded-pill text-uppercase'>Top</span>
+                    {{/if}}
+                    </div>
+                    <div
+                      class='card-body'
+                    >{{description}}</div>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+          {{/with}}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{#with goodsBlock}}
+    <div class='row'>
+      <div class='col-12 mb-5'>
+        <div class='nav nav-tabs'>
+          <div class='nav-item'>
+            <a
+              href='#'
+              class='nav-link active'
+            >Electronics</a>
+          </div>
+          <div class='nav-item'>
+            <a href='#' class='nav-link'>Home & Kitchen</a>
+          </div>
+          <div class='nav-item'>
+            <a href='#' class='nav-link'>Clothing &
+              Accessories</a>
+          </div>
+          <div class='nav-item'>
+            <a href='#' class='nav-link disabled'>Toys &
+              Games</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{#each cards}}
+  <div class='row'>
+    <div class='col-4 m-5'>
+      <div class="card-group">
+        <div class="card">
+          <img src={{image}} class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{title}}
+                {{#if isHot includeZero=true}}
+                <span class='badge text-bg-warning rounded-pill text-uppercase'>Hot</span>
+                {{/if}}
+                {{#if isNew includeZero=true}}
+                <span class='badge text-bg-primary rounded-pill text-uppercase'>NEW</span>
+                {{/if}}           
+                </h5>
+                  <p class="card-text">{{description}}</p>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+{{/with}}
+<hr />
+{{#with subscribe}}
+  <div class="alert alert-dark">
+    <h2>{{header}}</h2>
+    <p class='m-2'>{{description}}</p>
+    {{#each buttons}}
+    <a class="btn btn-primary" href={{link}}>{{text}}</a>
+    {{/each}}
+  </div>
+{{/with}}
+<hr />
+{{#with service}}
+  <div class="alert alert-success text-center">
+    <h2>{{title}}</h2>
+    <p class='m-2'>{{description}}</p>
+    {{#each buttons}}
+    <a class="btn btn-primary" href={{link}}>{{text}}</a>
+    {{/each}}
+  </div>
+{{/with}}
+</main>
