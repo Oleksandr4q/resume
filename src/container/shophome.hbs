@@ -38,8 +38,8 @@
         <div class='card-title'>
           {{#with newsBlock}}
             <h1 class='text-center'>{{title}}</h1>
-            {{#each cards}}
               <div class='row'>
+                {{#each cards}}
                 <div class='col-12 mb-5'>
                   <div
                     class='card col-3 mb-3 mx-4 text-bg-dark'
@@ -57,8 +57,8 @@
                     >{{description}}</div>
                   </div>
                 </div>
-              </div>
             {{/each}}
+          </div>
           {{/with}}
         </div>
       </div>
@@ -88,8 +88,8 @@
         </div>
       </div>
     </div>
+      <div class='row'>
     {{#each cards}}
-  <div class='row'>
     <div class='col-4 m-5'>
       <div class="card-group">
         <div class="card">
@@ -109,8 +109,8 @@
         </div>
       </div>
     </div>
-  </div>
   {{/each}}
+    </div>
 {{/with}}
 <hr />
 {{#with subscribe}}
