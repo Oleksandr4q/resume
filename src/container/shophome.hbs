@@ -131,5 +131,16 @@
       {{/each}}
     </div>
   {{/with}}
+
   <hr />
+  <div class='row'>
+    {{#each footer}}
+      {{#each this}}
+        <div class='col-3'>
+          <a href='{{link}}' target='_blank'>{{text}}</a>
+        </div>
+      {{/each}}
+    {{/each}}
+  </div>
+
 </main>
