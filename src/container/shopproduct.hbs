@@ -48,22 +48,28 @@
     {{#with productData}}
       <img class='col-6' src='{{img}}' />
 
-      <table
-        class='col-5 table-striped table-bordered mx-4'
-      >
-        {{#with item}}
+      {{#with item}}
+        <table
+          class='col-5 table-striped table-bordered mx-4'
+        >
           <thead>
-            <tr>
-              <th>{{head}}</th>
+            <tr class='text-center'>
+              {{#each head}}
+                <th>{{this}}</th>
+              {{/each}}
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>{{body}}</td>
-            </tr>
+            {{#each body}}
+              <tr class='text-center'>
+                {{#each this}}
+                  <td>{{this}}</td>
+                {{/each}}
+              </tr>
+            {{/each}}
           </tbody>
-        {{/with}}
-      </table>
+        </table>
+      {{/with}}
 
       <div class='col-6'>
         <div class='card my-4'>
@@ -100,9 +106,11 @@
           <div class='card-header'>
             {{title}}
           </div>
-          <ul class='list-group list-group-flush'>
-            <li class='list-group-item'>{{list}}</li>
-          </ul>
+          {{#each list}}
+            <ul class='list-group list-group-flush'>
+              <li class='list-group-item'>{{this}}</li>
+            </ul>
+          {{/each}}
         </div>
       {{/with}}
 
