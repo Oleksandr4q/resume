@@ -1,0 +1,203 @@
+<main class='p-5'>
+  <div class='card'>
+    {{#with navigation}}
+      <ul class='nav'>
+        {{#each links}}
+          {{#if @last}}
+            <li class='nav-item'>
+              <a
+                class='nav-link disabled'
+                href='{{href}}'
+              >{{text}}</a>
+            </li>
+          {{else}}
+            <li class='nav-item'>
+              <a
+                class='nav-link'
+                href='{{href}}'
+              >{{text}}</a>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ul>
+    {{/with}}
+  </div>
+  <hr />
+
+  <div class='row'>
+    <div class='col-12'>
+      <ol class='breadcrumb'>
+        {{#each breadcrumb}}
+          {{#if @last}}
+            <li
+              class='breadcrumb-item active'
+              aria-current='page'
+            >{{name}}</li>
+          {{else}}
+            <li class='breadcrumb-item'>
+              <a href='{{url}}' target='_blank'>{{name}}</a>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+  <hr />
+
+  <div class='row'>
+    {{#with productData}}
+      <img class='col-6' src='{{img}}' />
+
+      <table
+        class='col-5 table-striped table-bordered mx-4'
+      >
+        {{#with item}}
+          <thead>
+            <tr>
+              <th>{{head}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{body}}</td>
+            </tr>
+          </tbody>
+        {{/with}}
+      </table>
+
+      <div class='col-6'>
+        <div class='card my-4'>
+          {{#with info}}
+            <div class='card-title m-3'>{{title}}</div>
+            <div class='card-body'>
+              <p>{{about}}</p>
+              <b>{{price}}</b>
+              <br />
+              {{#each category}}
+                {{#if @first}}
+                  <span
+                    class='badge rounded-pill text-bg-warning'
+                  >{{name}}</span>
+                {{/if}}
+                {{#if isNew includeZero=true}}
+                  <span
+                    class='badge rounded-pill text-bg-primary'
+                  >{{name}}</span>
+                {{/if}}
+                {{#if @last}}
+                  <span
+                    class='badge rounded-pill text-bg-info'
+                  >{{name}}</span>
+                {{/if}}
+              {{/each}}
+            </div>
+          {{/with}}
+        </div>
+      </div>
+
+      {{#with param}}
+        <div class='card col-5 m-4'>
+          <div class='card-header'>
+            {{title}}
+          </div>
+          <ul class='list-group list-group-flush'>
+            <li class='list-group-item'>{{list}}</li>
+          </ul>
+        </div>
+      {{/with}}
+
+      {{#with alert}}
+        <div class='alert alert-danger col-4 mx-2'>
+          {{#if isError includeZero=true}}
+            {{text}}
+          {{/if}}
+        </div>
+      {{/with}}
+
+      <div class='row'>
+        <div class='card mx-2'>
+          <div class='card-body'>
+            {{#each actionList}}
+              {{#if @first}}
+                <button
+                  class='btn btn-warning mx-2'
+                >{{name}}</button>
+              {{/if}}
+              {{#if isError includeZero=true}}
+                <button
+                  class='btn btn-outline-danger mx-2'
+                >{{name}}</button>
+              {{/if}}
+              {{#if isSuccess}}
+                <button
+                  class='btn btn-success mx-2'
+                >{{name}}</button>
+              {{/if}}
+              {{#if @last}}
+                <button
+                  class='btn btn-outline-success mx-2'
+                >{{name}}</button>
+              {{/if}}
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    {{/with}}
+  </div>
+  <hr />
+
+  <div class='row'>
+    {{#with goodsOtherBlock}}
+      <h3 class='text-center'>{{title}}</h3>
+      {{#each cards}}
+        <div class='col-4'>
+          <div class='card-group'>
+            <div class='card'>
+              <img src={{image}} class='card-img-top' />
+              <div class='card-body'>
+                <h5 class='card-title'>{{title}}
+                  {{#if isHot includeZero=true}}
+                    <span
+                      class='badge text-bg-warning rounded-pill text-uppercase'
+                    >Hot</span>
+                  {{/if}}
+                  {{#if isNew includeZero=true}}
+                    <span
+                      class='badge text-bg-primary rounded-pill text-uppercase'
+                    >NEW</span>
+                  {{/if}}
+                </h5>
+                <p class='card-text'>{{description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    {{/with}}
+  </div>
+  <hr />
+
+  {{#with service}}
+    <div class='alert alert-success text-center'>
+      <h2>{{title}}</h2>
+      <p class='m-2'>{{description}}</p>
+      {{#each buttons}}
+        <a
+          class='btn btn-primary'
+          href={{link}}
+        >{{text}}</a>
+      {{/each}}
+    </div>
+  {{/with}}
+  <hr />
+
+  <div class='row'>
+    {{#each footer}}
+      {{#each this}}
+        <div class='col-3'>
+          <a href='{{link}}' target='_blank'>{{text}}</a>
+        </div>
+      {{/each}}
+    {{/each}}
+  </div>
+</main>
