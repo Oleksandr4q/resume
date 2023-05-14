@@ -25,11 +25,45 @@
   <hr />
 
   <div class='row'>
+    <div class='col-12'>
+      <ol class='breadcrumb'>
+        {{#each breadcrumb}}
+          {{#if @last}}
+            <li
+              class='breadcrumb-item active'
+              aria-current='page'
+            >{{name}}</li>
+          {{else}}
+            <li class='breadcrumb-item'>
+              <a href='{{url}}' target='_blank'>{{name}}</a>
+            </li>
+          {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+  <hr />
+  <div class='row'>
+    {{#with newsData}}
+      <img class='col-12' src='{{photo}}' />
+      {{#with head}}
+        <h1 class='text-center my-5'>{{heading}}</h1>
+        <p>{{description}}</p>
+      {{/with}}
+      {{#each body}}
+        <h4>{{title}}</h4>
+        <p>{{text}}</p>
+      {{/each}}
+    {{/with}}
+  </div>
+  <hr />
+
+  <div class='row'>
     <div class='col-12 mb-5'>
       <div class='card'>
         <div class='card-title'>
-          {{#with newsBlock}}
-            <h1 class='text-center'>{{title}}</h1>
+          {{#with newsOtherBlock}}
+            <h1 class='text-center my-3'>{{title}}</h1>
             <div class='row'>
               {{#each cards}}
                 <div class='col-3 mb-5'>
@@ -40,7 +74,7 @@
                           class='badge text-bg-success rounded-pill text-uppercase'
                         >New</span>
                       {{/if}}
-                      {{#if isNew includeZero=true}}
+                      {{#if idNew includeZero=true}}
                         <span
                           class='badge text-bg-danger rounded-pill text-uppercase'
                         >Top</span>
@@ -59,73 +93,10 @@
     </div>
   </div>
 
-  {{#with goodsBlock}}
-    <div class='row'>
-      <div class='nav nav-tabs'>
-        {{#each tabs}}
-          <div class='col-2'>
-            {{#if isActive includeZero=true}}
-              <div class='nav nav-item'>
-                <a
-                  href='#'
-                  class='nav-link active'
-                >{{text}}</a>
-              </div>
-            {{else}}
-              <div class='nav nav-item'>
-                <a href='#' class='nav-link'>{{text}}</a>
-              </div>
-            {{/if}}
-          </div>
-        {{/each}}
-      </div>
-    </div>
-    <div class='row'>
-      {{#each cards}}
-        <div class='col-3 m-5'>
-          <div class='card-group'>
-            <div class='card'>
-              <img src={{image}} class='card-img-top' />
-              <div class='card-body'>
-                <h5 class='card-title'>{{title}}
-                  {{#if isHot includeZero=true}}
-                    <span
-                      class='badge text-bg-warning rounded-pill text-uppercase'
-                    >Hot</span>
-                  {{/if}}
-                  {{#if isNew includeZero=true}}
-                    <span
-                      class='badge text-bg-primary rounded-pill text-uppercase'
-                    >NEW</span>
-                  {{/if}}
-                </h5>
-                <p class='card-text'>{{description}}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  {{/with}}
-  <hr />
-  {{#with subscribe}}
-    <div class='alert alert-dark'>
-      <h2>{{header}}</h2>
-      <p class='m-2'>{{description}}</p>
-      {{#each buttons}}
-        <a
-          class='btn btn-primary'
-          href={{link}}
-        >{{text}}</a>
-      {{/each}}
-    </div>
-  {{/with}}
-  <hr />
-
   {{#with service}}
     <div class='alert alert-success text-center'>
-      <h2>{{title}}</h2>
-      <p class='m-2'>{{description}}</p>
+      <h2 class='text text-light'>{{title}}</h2>
+      <p class='m-2 text text-light'>{{description}}</p>
       {{#each buttons}}
         <a
           class='btn btn-primary'
@@ -145,5 +116,6 @@
       {{/each}}
     {{/each}}
   </div>
+  <hr />
 
 </main>
