@@ -138,11 +138,13 @@
 
   <div class='row'>
     {{#each footer}}
+    <div class="nav col-1 mx-5">
       {{#each this}}
-        <div class='col-3'>
-          <a href='{{link}}' target='_blank'>{{text}}</a>
+        <div>
+          <a class="nav-link {{#if @last}} disabled {{/if}}" href='{{link}}' target='_blank'>{{text}}</a>
         </div>
       {{/each}}
+      </div>
     {{/each}}
   </div>
 
