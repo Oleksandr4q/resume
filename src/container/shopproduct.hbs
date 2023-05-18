@@ -102,13 +102,13 @@
       </div>
 
       {{#with param}}
-        <div class='card col-5 m-4'>
+        <div class='card col-5 mx-4 my-4'>
           <div class='card-header'>
             {{title}}
           </div>
           {{#each list}}
             <ul class='list-group list-group-flush'>
-              <li class='list-group-item'>{{this}}</li>
+              <li class='list-group-item mb-1 pb-1'>{{this}}</li>
             </ul>
           {{/each}}
         </div>
@@ -201,11 +201,13 @@
 
   <div class='row'>
     {{#each footer}}
+    <div class="nav col-1 mx-5">
       {{#each this}}
-        <div class='col-3'>
-          <a href='{{link}}' target='_blank'>{{text}}</a>
+        <div>
+          <a class="nav-link {{#if @last}} disabled {{/if}}" href='{{link}}' target='_blank'>{{text}}</a>
         </div>
       {{/each}}
+      </div>
     {{/each}}
   </div>
 </main>
