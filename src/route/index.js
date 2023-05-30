@@ -2462,38 +2462,42 @@ router.get('/shoporder', function (req, res) {
         ],
       },
     },
-    action_block: [
-      { text: 'Швидке замовлення', isSuccess: true },
-      { text: 'Видалити', isDanger: true },
-      { text: 'Детальніше', isInfo: true },
-    ],
-    total: {
-      title: 'Всього',
-      item_list: [
-        { name: 'Ноут', price: '25 000 ₴' },
-        { name: 'Мишка', price: '25 000 ₴' },
-        { name: 'Клава', price: '25 000 ₴' },
-      ],
-      additional_info: [
-        { text: 'Всього товарів', value: '75 000 ₴' },
-        { text: 'Купони', value: 'Немає' },
-        { text: 'Доставка', value: 'Безкоштовно' },
-      ],
-      total_price: {
-        text: 'Всього товарів',
-        value: '75 000 ₴',
+    left_side: [
+      {
+        action_block: [
+          { text: 'Швидке замовлення', isSuccess: true },
+          { text: 'Видалити', isDanger: true },
+          { text: 'Детальніше', isInfo: true },
+        ],
+        total: {
+          title: 'Всього',
+          item_list: [
+            { name: 'Ноут', price: '25 000 ₴' },
+            { name: 'Мишка', price: '25 000 ₴' },
+            { name: 'Клава', price: '25 000 ₴' },
+          ],
+          additional_info: [
+            { text: 'Всього товарів', value: '75 000 ₴' },
+            { text: 'Купони', value: 'Немає' },
+            { text: 'Доставка', value: 'Безкоштовно' },
+          ],
+          total_price: {
+            text: 'Всього товарів',
+            value: '75 000 ₴',
+          },
+          button: [
+            {
+              text: 'Підтвердити замовлення',
+              isPrimary: true,
+            },
+            {
+              text: 'Відмінити купони',
+              isOutline: true,
+            },
+          ],
+        },
       },
-      button: [
-        {
-          text: 'Підтвердити замовлення',
-          isPrimary: true,
-        },
-        {
-          text: 'Відмінити купони',
-          isOutline: true,
-        },
-      ],
-    },
+    ],
     delivery: {
       title: 'Доставка',
       select: [
@@ -2548,7 +2552,8 @@ router.get('/shoporder', function (req, res) {
           },
         ],
       },
-        title: 'Контактні дані отримувача',
+      title: 'Контактні дані отримувача',
+      contact: {
         surname: {
           label: 'Прізвище',
           placeholder: 'Іванов',
