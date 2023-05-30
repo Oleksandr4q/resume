@@ -2548,7 +2548,6 @@ router.get('/shoporder', function (req, res) {
           },
         ],
       },
-      contact: {
         title: 'Контактні дані отримувача',
         surname: {
           label: 'Прізвище',
