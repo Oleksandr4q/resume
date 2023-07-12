@@ -4,12 +4,28 @@
  }}
 
 <div class='p-5'>
-  <h1>USB хаб Type C 12 в 1 HDMI VGA AUX 3.5 mm</h1>
-
-  <button
-    type='button'
-    class='btn btn-primary'
-  >Купити</button>
+  <div class='row'>
+    {{#with header}}
+      {{#with title}}
+        <h1 class='col-9 mb-5'>{{name}}</h1>
+        <b class='col-3 mb-5'>{{description}}</b>
+      {{/with}}
+    {{/with}}
+  </div>
+  {{#with main}}
+    {{#with project}}
+      <h2>{{title}}</h2>
+      <p>{{description}}</p>
+    {{/with}}
+    {{#each buttons}}
+      <div class='col-2'>
+        <a
+          class='btn btn-outline-primary my-1'
+          href='{{link}}'
+        >{{text}}</a>
+      </div>
+    {{/each}}
+  {{/with}}
 </div>
 
 {{! 
