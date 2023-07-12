@@ -42,7 +42,117 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'realbasic',
+
+    header: {
+      title: {
+        name: 'Hulevatyi Oleksandr',
+        description: 'Resume project',
+      },
+    },
+    main: {
+      project: {
+        title: 'Список сторінок',
+        description:
+          'В цьому проекті я навчився як викорустовувати функції HTML та CSS',
+      },
+      buttons: [
+        {
+          text: 'Bio',
+          link: 'http://localhost:3000/bio',
+        },
+        {
+          text: 'Car',
+          link: 'http://localhost:3000/car',
+        },
+        {
+          text: 'Education',
+          link: 'http://localhost:3000/education',
+        },
+        {
+          text: 'Facebook',
+          link: 'http://localhost:3000/facebook',
+        },
+        {
+          text: 'JS',
+          link: 'http://localhost:3000/js',
+        },
+        {
+          text: 'Mac',
+          link: 'http://localhost:3000/mac',
+        },
+        {
+          text: 'Person',
+          link: 'http://localhost:3000/person',
+        },
+        {
+          text: 'Program',
+          link: 'http://localhost:3000/program',
+        },
+        {
+          text: 'Shopcart',
+          link: 'http://localhost:3000/shopcart',
+        },
+        {
+          text: 'Shopcatalog',
+          link: 'http://localhost:3000/shopcatalog',
+        },
+        {
+          text: 'Shophome',
+          link: 'http://localhost:3000/shophome',
+        },
+        {
+          text: 'Shopnews',
+          link: 'http://localhost:3000/shopNews',
+        },
+        {
+          text: 'Shoporder',
+          link: 'http://localhost:3000/shoporder',
+        },
+        {
+          text: 'Shopproduct',
+          link: 'http://localhost:3000/shopproduct',
+        },
+        {
+          text: 'Shopprofile',
+          link: 'http://localhost:3000/shopprofile',
+        },
+        {
+          text: 'Shopreview',
+          link: 'http://localhost:3000/shopreview',
+        },
+        {
+          text: 'Skills',
+          link: 'http://localhost:3000/skills',
+        },
+        {
+          text: 'Summury',
+          link: 'http://localhost:3000/summary',
+        },
+        {
+          text: 'Task21',
+          link: 'http://localhost:3000/task21',
+        },
+        {
+          text: 'Task22',
+          link: 'http://localhost:3000/task22',
+        },
+        {
+          text: 'Task31',
+          link: 'http://localhost:3000/task31',
+        },
+        {
+          text: 'Web',
+          link: 'http://localhost:3000/web',
+        },
+        {
+          text: 'Work',
+          link: 'http://localhost:3000/work',
+        },
+      ],
+    },
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -82,8 +192,6 @@ router.get('/summary', function (req, res) {
     footer,
   })
 })
-
-// ================================================================
 
 // ================================================================
 
@@ -294,22 +402,6 @@ router.get('/work', function (req, res) {
 
 // ================================================================
 
-// Підключаємо роутер до бек-енду
-module.exports = router
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-// ================================================================
-
 //              ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/person', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -413,19 +505,6 @@ router.get('/person', function (req, res) {
       },
     },
   })
-})
-
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
@@ -536,19 +615,6 @@ router.get('/bio', function (req, res) {
 
 // ================================================================
 
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-// ================================================================
-
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('program', {
@@ -633,19 +699,6 @@ router.get('/program', function (req, res) {
       },
     },
   })
-})
-
-// ================================================================
-
-// router.get Створює нам один ентпоїнт
-
-//           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
@@ -873,8 +926,6 @@ router.get('/js', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
 
 // ================================================================
 
@@ -1243,8 +1294,6 @@ router.get('/facebook', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1329,8 +1378,6 @@ router.get('/task21', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
 
 // ================================================================
 
@@ -1669,8 +1716,6 @@ router.get('/bootstrapNav', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1959,8 +2004,6 @@ router.get('/shophome', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
-// ================================================================
 
 // ================================================================
 
