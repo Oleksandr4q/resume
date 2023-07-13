@@ -60,95 +60,95 @@ router.get('/', function (req, res) {
       buttons: [
         {
           text: 'Bio',
-          link: 'http://localhost:3000/bio',
+          link: 'http:/bio',
         },
         {
           text: 'Car',
-          link: 'http://localhost:3000/car',
+          link: 'http:/car',
         },
         {
           text: 'Education',
-          link: 'http://localhost:3000/education',
+          link: 'http:/education',
         },
         {
           text: 'Facebook',
-          link: 'http://localhost:3000/facebook',
+          link: 'http:/facebook',
         },
         {
           text: 'JS',
-          link: 'http://localhost:3000/js',
+          link: 'http:/js',
         },
         {
           text: 'Mac',
-          link: 'http://localhost:3000/mac',
+          link: 'http:/mac',
         },
         {
           text: 'Person',
-          link: 'http://localhost:3000/person',
+          link: 'http:/person',
         },
         {
           text: 'Program',
-          link: 'http://localhost:3000/program',
+          link: 'http:/program',
         },
         {
           text: 'Shopcart',
-          link: 'http://localhost:3000/shopcart',
+          link: 'http:/shopcart',
         },
         {
           text: 'Shopcatalog',
-          link: 'http://localhost:3000/shopcatalog',
+          link: 'http:/shopcatalog',
         },
         {
           text: 'Shophome',
-          link: 'http://localhost:3000/shophome',
+          link: 'http:/shophome',
         },
         {
           text: 'Shopnews',
-          link: 'http://localhost:3000/shopNews',
+          link: 'http:/shopNews',
         },
         {
           text: 'Shoporder',
-          link: 'http://localhost:3000/shoporder',
+          link: 'http:/shoporder',
         },
         {
           text: 'Shopproduct',
-          link: 'http://localhost:3000/shopproduct',
+          link: 'http:/shopproduct',
         },
         {
           text: 'Shopprofile',
-          link: 'http://localhost:3000/shopprofile',
+          link: 'http:/shopprofile',
         },
         {
           text: 'Shopreview',
-          link: 'http://localhost:3000/shopreview',
+          link: 'http:/shopreview',
         },
         {
           text: 'Skills',
-          link: 'http://localhost:3000/skills',
+          link: 'http:/skills',
         },
         {
           text: 'Summury',
-          link: 'http://localhost:3000/summary',
+          link: 'http:/summary',
         },
         {
           text: 'Task21',
-          link: 'http://localhost:3000/task21',
+          link: 'http:/task21',
         },
         {
           text: 'Task22',
-          link: 'http://localhost:3000/task22',
+          link: 'http:/task22',
         },
         {
           text: 'Task31',
-          link: 'http://localhost:3000/task31',
+          link: 'http:/task31',
         },
         {
           text: 'Web',
-          link: 'http://localhost:3000/web',
+          link: 'http:/web',
         },
         {
           text: 'Work',
-          link: 'http://localhost:3000/work',
+          link: 'http:/work',
         },
       ],
     },
