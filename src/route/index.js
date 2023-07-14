@@ -60,95 +60,95 @@ router.get('/', function (req, res) {
       buttons: [
         {
           text: 'Bio',
-          link: 'http:/bio',
+          link: '/bio',
         },
         {
           text: 'Car',
-          link: 'http:/car',
+          link: '/car',
         },
         {
           text: 'Education',
-          link: 'http:/education',
+          link: '/education',
         },
         {
           text: 'Facebook',
-          link: 'http:/facebook',
+          link: '/facebook',
         },
         {
           text: 'JS',
-          link: 'http:/js',
+          link: '/js',
         },
         {
           text: 'Mac',
-          link: 'http:/mac',
+          link: '/mac',
         },
         {
           text: 'Person',
-          link: 'http:/person',
+          link: '/person',
         },
         {
           text: 'Program',
-          link: 'http:/program',
+          link: '/program',
         },
         {
           text: 'Shopcart',
-          link: 'http:/shopcart',
+          link: '/shopcart',
         },
         {
           text: 'Shopcatalog',
-          link: 'http:/shopcatalog',
+          link: '/shopcatalog',
         },
         {
           text: 'Shophome',
-          link: 'http:/shophome',
+          link: '/shophome',
         },
         {
           text: 'Shopnews',
-          link: 'http:/shopNews',
+          link: '/shopNews',
         },
         {
           text: 'Shoporder',
-          link: 'http:/shoporder',
+          link: '/shoporder',
         },
         {
           text: 'Shopproduct',
-          link: 'http:/shopproduct',
+          link: '/shopproduct',
         },
         {
           text: 'Shopprofile',
-          link: 'http:/shopprofile',
+          link: '/shopprofile',
         },
         {
           text: 'Shopreview',
-          link: 'http:/shopreview',
+          link: '/shopreview',
         },
         {
           text: 'Skills',
-          link: 'http:/skills',
+          link: '/skills',
         },
         {
           text: 'Summury',
-          link: 'http:/summary',
+          link: '/summary',
         },
         {
           text: 'Task21',
-          link: 'http:/task21',
+          link: '/task21',
         },
         {
           text: 'Task22',
-          link: 'http:/task22',
+          link: '/task22',
         },
         {
           text: 'Task31',
-          link: 'http:/task31',
+          link: '/task31',
         },
         {
           text: 'Web',
-          link: 'http:/web',
+          link: '/web',
         },
         {
           text: 'Work',
-          link: 'http:/work',
+          link: '/work',
         },
       ],
     },
